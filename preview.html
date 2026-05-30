@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Cyberpunk Login UI</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:#050816;
+}
+
+/* Animated Background */
+
+.bg{
+    position:absolute;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+.circle{
+    position:absolute;
+    border-radius:50%;
+    background:linear-gradient(45deg,#00f7ff,#8b5cf6);
+    opacity:0.2;
+    animation:float 10s infinite alternate;
+}
+
+.circle:nth-child(1){
+    width:300px;
+    height:300px;
+    top:-100px;
+    left:-50px;
+}
+
+.circle:nth-child(2){
+    width:400px;
+    height:400px;
+    bottom:-150px;
+    right:-100px;
+    animation-duration:14s;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(0px) translateX(0px);
+    }
+    to{
+        transform:translateY(40px) translateX(50px);
+    }
+}
+
+/* Glass Card */
+
+.card{
+    position:relative;
+    width:360px;
+    padding:40px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    box-shadow:0 10px 40px rgba(0,0,0,0.5);
+    color:white;
+    z-index:10;
+}
+
+.card h1{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:32px;
+    background:linear-gradient(45deg,#00f7ff,#8b5cf6);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* Input */
+
+.input-box{
+    margin-bottom:20px;
+}
+
+.input-box input{
+    width:100%;
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:15px;
+    background:rgba(255,255,255,0.08);
+    color:white;
+    font-size:15px;
+}
+
+.input-box input::placeholder{
+    color:#b8b8b8;
+}
+
+/* Button */
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    background:linear-gradient(45deg,#00f7ff,#8b5cf6);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+button:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 25px #8b5cf6;
+}
+
+/* Small Text */
+
+.bottom{
+    margin-top:20px;
+    text-align:center;
+    color:#cbd5e1;
+    font-size:14px;
+}
+
+.bottom span{
+    color:#00f7ff;
+    cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg">
+    <div class="circle"></div>
+    <div class="circle"></div>
+</div>
+
+<div class="card">
+
+    <h1>CYBER LOGIN</h1>
+
+    <div class="input-box">
+        <input type="text" placeholder="Username">
+    </div>
+
+    <div class="input-box">
+        <input type="password" placeholder="Password">
+    </div>
+
+    <button>ACCESS SYSTEM</button>
+
+    <div class="bottom">
+        New User? <span>Create Account</span>
+    </div>
+
+</div>
+
+</body>
+</html>
